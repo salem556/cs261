@@ -1,0 +1,72 @@
+
+Checking that hash table is not NULL... OK
+
+Checking that hash table is empty...
+ is empty? should be 1: 1...OK
+Adding key == 5...
+Checking that hash table is empty...
+ is empty? should be 0: 0...OK
+Remove key == 5...
+Checking that hash table is empty...
+ is empty? should be 1: 1...OK
+
+Inserting 8 elements...
+ 
+== Lookup Hash Table: Key / Found Value (Expected Value)
+  -  203 /  203 ( 203)
+  -  170 /  170 ( 170)
+  -  205 /  205 ( 205)
+  -  215 /  215 ( 215)
+  -  181 /  181 ( 181)
+  -  227 /  227 ( 227)
+  -  174 /  174 ( 174)
+  -  208 /  208 ( 208)
+Checking size...
+ size should be 8: 8...OK
+
+Lookup for a key that does not exist in the hash table...
+ should return null: (null)...OK
+
+After reinserting the same 8 elements...
+Checking size...
+ size should be 8: 8...OK
+
+Inserting next 8 elements ...
+ 
+== Lookup Hash Table: Key / Found Value (Expected Value)
+  -  203 /  203 ( 203)
+  -  170 /  170 ( 170)
+  -  205 /  205 ( 205)
+  -  215 /  215 ( 215)
+  -  181 /  181 ( 181)
+  -  227 /  227 ( 227)
+  -  174 /  174 ( 174)
+  -  208 /  208 ( 208)
+  -   41 /   41 (  41)
+  -   13 /   13 (  13)
+  -   58 /   58 (  58)
+  -   43 /   43 (  43)
+  -   50 /   50 (  50)
+  -   59 /   59 (  59)
+  -   35 /   35 (  35)
+  -    6 /    6 (   6)
+== Did we see all values we expected (expect 1)? 1
+Checking size...
+ size should be 16: 16...OK
+Removing first 8 element inserted...
+Checking size...
+ size should be 8: 8...OK
+
+== Lookup Hash Table: Key / Found Value (Expected Value)
+  -   41 /   41 (  41)
+  -   13 /   13 (  13)
+  -   58 /   58 (  58)
+  -   43 /   43 (  43)
+  -   50 /   50 (  50)
+  -   59 /   59 (  59)
+  -   35 /   35 (  35)
+  -    6 /    6 (   6)
+== Did we see all values we expected (expect 1)? 1
+
+
+Check valgrind for memory leaks...

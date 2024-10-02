@@ -1,0 +1,90 @@
+$ ./test_queue
+== Enqueueing first 8 of 16 values.
+Print Queue out...
+0: 0
+1: 1
+2: 4
+3: 9
+4: 16
+5: 25
+6: 36
+7: 49
+
+== Dequeueing some values: front / dequeued (expected)
+  -    0 /    0 (   0)
+  -    1 /    1 (   1)
+  -    4 /    4 (   4)
+  -    9 /    9 (   9)
+Print Queue out, check circular buffer:
+0: NULL
+1: NULL
+2: NULL
+3: NULL
+4: 16
+5: 25
+6: 36
+7: 49
+
+== Enqueueing another 4 of 16 values.
+Print Queue out, check circular buffer:
+0: 64
+1: 81
+2: 100
+3: 121
+4: 16
+5: 25
+6: 36
+7: 49
+
+== Enqueueing remaining 4 of 16 values.
+Print Queue out, check resize...:
+0: 16
+1: 25
+2: 36
+3: 49
+4: 64
+5: 81
+6: 100
+7: 121
+8: 144
+9: 169
+10: 196
+11: 225
+12: NULL
+13: NULL
+14: NULL
+15: NULL
+
+== Dequeueing remaining values: front / dequeued (expected)
+  -   16 /   16 (  16)
+  -   25 /   25 (  25)
+  -   36 /   36 (  36)
+  -   49 /   49 (  49)
+  -   64 /   64 (  64)
+  -   81 /   81 (  81)
+  -  100 /  100 ( 100)
+  -  121 /  121 ( 121)
+  -  144 /  144 ( 144)
+  -  169 /  169 ( 169)
+  -  196 /  196 ( 196)
+  -  225 /  225 ( 225)
+Print Queue:
+0: NULL
+1: NULL
+2: NULL
+3: NULL
+4: NULL
+5: NULL
+6: NULL
+7: NULL
+8: NULL
+9: NULL
+10: NULL
+11: NULL
+12: NULL
+13: NULL
+14: NULL
+15: NULL
+
+== Is queue empty (expect 1)? 1
+== Saw all test data (expect 1)? 1

@@ -1,0 +1,17 @@
+Name: Salem Demssie
+ONID: demssies
+
+This code implements a hashtable using dynamic arrays with open addressing to handle collisions.
+The hash table provides basic operations such as insertion, lookup and removal of key-value pairs.
+It also supports resizing to maintain efficient performance as the number of elements grows.
+
+
+Instructions for user
+1. Compile program using : make
+2. Run the program using : ./test_ht
+
+
+Limitations
+The program assumes that the provided hash and comparison functions are well-designed and appropriate for the data being used.
+The hash table does not free the individual keys and values stored within it. This is the responsibility of the caller to manage memory for keys and values if they are dynamically allocated.
+The current implementation returns the key itself on lookup, which may not be suitable for all use cases. If values are required instead, the lookup function needs to be adjusted.
